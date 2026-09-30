@@ -1,0 +1,10 @@
+test_app.py
+.git
+.gitignore
+__pycache__/
+*.py[cod]
+venv/
+myenv/
+myenv1/
+myenv2/
+.venv/
