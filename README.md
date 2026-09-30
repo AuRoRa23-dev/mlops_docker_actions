@@ -48,13 +48,7 @@ environments are excluded.
   - `DOCKERHUB_TOKEN`: the Docker Hub access token. Do not commit the token to the repository.
 3. Push to any branch, or run **Build and push Docker image** from the repository's **Actions** tab.
 
-The workflow runs `test_app.py` before building, but the Docker image itself only
-contains `app.py` and its runtime dependencies. On success, it publishes
-`<dockerhub-username>/student-management-api:latest` and a tag matching the
-commit SHA to Docker Hub.
-
-## Run tests locally
-
-```powershell
-\.\venv\Scripts\python.exe -m unittest -v
-```
+The workflow builds the image from `app.py` and its runtime dependencies, then
+publishes `<dockerhub-username>/student-management-api:latest` and a tag
+matching the commit SHA to Docker Hub. Tests are not run because this repository
+does not currently include a test suite.
