@@ -19,7 +19,7 @@ def get_students():
     return jsonify(students)
 
 
-@app.post("/students")
+@app.post("/students1")
 def add_student():
     data = request.get_json(silent=True)
 
